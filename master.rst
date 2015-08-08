@@ -1,8 +1,0 @@
-Sitemap
-=======
-
-.. toctree::
-   :maxdepth: 1
-
-   2014/06/13/static_blog_tinker
-
