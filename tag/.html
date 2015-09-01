@@ -51,44 +51,50 @@
     <div class="row">
 
         <div class="span9">
+        
+
+        
+
+
     <div class='article'>
         <div class="content-title">
-            <h1>A static blog generator - Tinkerer</h1>
+            <a href="http://shinbo91.github.io/static_blog_tinkerer.html"><h1>A static blog generator - Tinkerer</h1></a>
 星期五 13 六月 2014
 
 by <a class="url fn" href="http://shinbo91.github.io/author/shinbo91.html">shinbo91</a>
  
 
 
+ 
         </div>
-	
+        
         <div><p>常見的 Static Blog Generator 有很多，像 <a href="http://getpelican.com/">Pelican</a>, <a href="http://octopress.org/">Octopress</a>, 或是 <a href="http://jekyllrb.com">Jekyll</a> 等等。
 而 <a href="http://tinkerer.me">Tinkerer</a> 是 <a href="http://sphinx-doc.org">Sphinx</a> 下的一個 extension，專門用來將 ReST 文件轉換成 Blog 的文章。
 所以若是熟悉 <a href="http://sphinx-doc.org">Sphinx</a> 及 ReST 語法的話，那麼用 <a href="http://tinkerer.me">Tinkerer</a> 來寫 Blog 應該會是一件很容易的事。</p>
 <p>在已經安裝了 <a href="http://sphinx-doc.org">Sphinx</a> 的環境中，要使用 Tinkerer 的話，可透過下列的方式來安裝</p>
-<div class="highlight"><pre><span class="nv">$ </span>easy_install -U Tinkerer
+<div class="highlight"><pre><span class="err">$</span> <span class="n">easy_install</span> <span class="o">-</span><span class="n">U</span> <span class="n">Tinkerer</span>
 
-or
+<span class="n">or</span>
 
-<span class="nv">$ </span>pip install Tinkerer
+<span class="err">$</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">Tinkerer</span>
 </pre></div>
 
 
 <p>安裝完成後，便可透過下列的指令，來得知可使用的參數</p>
-<div class="highlight"><pre><span class="nv">$ </span>tinker --help
+<div class="highlight"><pre><span class="err">$</span> <span class="n">tinker</span> <span class="o">--</span><span class="n">help</span>
 </pre></div>
 
 
 <p>常用的參數如下</p>
-<div class="highlight"><pre><span class="nv">$ </span>tinker -s                     <span class="c"># 在此目錄下建立一個 Tinkerer 的 Blog</span>
-                                <span class="c"># 所有需要用到的檔案</span>
-<span class="nv">$ </span>tinker -d <span class="s1">&#39;foo bar&#39;</span>           <span class="c"># 建立一個 drafts/foobar.rst 的 draft 文件</span>
-                                <span class="c"># 其文章標題為 foo bar</span>
-<span class="nv">$ </span>tinker -p drafts/foo_bar.rst  <span class="c"># 將 draft/foo_bar.rst 文件</span>
-                                <span class="c"># 移到該文章建立日期所對應的目錄中</span>
-                                <span class="c"># 以產生一個 post 文件</span>
-<span class="nv">$ </span>tinker -b                     <span class="c"># 將所有 post 文件轉換成 HTML</span>
-                                <span class="c"># 並放置於 blog/html/ 下對應的目錄之中</span>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">tinker</span> <span class="o">-</span><span class="n">s</span>                     <span class="err">#</span> <span class="err">在此目錄下建立一個</span> <span class="n">Tinkerer</span> <span class="err">的</span> <span class="n">Blog</span>
+                                <span class="err">#</span> <span class="err">所有需要用到的檔案</span>
+<span class="err">$</span> <span class="n">tinker</span> <span class="o">-</span><span class="n">d</span> <span class="err">&#39;</span><span class="n">foo</span> <span class="n">bar</span><span class="err">&#39;</span>           <span class="err">#</span> <span class="err">建立一個</span> <span class="n">drafts</span><span class="o">/</span><span class="n">foobar</span><span class="p">.</span><span class="n">rst</span> <span class="err">的</span> <span class="n">draft</span> <span class="err">文件</span>
+                                <span class="err">#</span> <span class="err">其文章標題為</span> <span class="n">foo</span> <span class="n">bar</span>
+<span class="err">$</span> <span class="n">tinker</span> <span class="o">-</span><span class="n">p</span> <span class="n">drafts</span><span class="o">/</span><span class="n">foo_bar</span><span class="p">.</span><span class="n">rst</span>  <span class="err">#</span> <span class="err">將</span> <span class="n">draft</span><span class="o">/</span><span class="n">foo_bar</span><span class="p">.</span><span class="n">rst</span> <span class="err">文件</span>
+                                <span class="err">#</span> <span class="err">移到該文章建立日期所對應的目錄中</span>
+                                <span class="err">#</span> <span class="err">以產生一個</span> <span class="n">post</span> <span class="err">文件</span>
+<span class="err">$</span> <span class="n">tinker</span> <span class="o">-</span><span class="n">b</span>                     <span class="err">#</span> <span class="err">將所有</span> <span class="n">post</span> <span class="err">文件轉換成</span> <span class="n">HTML</span>
+                                <span class="err">#</span> <span class="err">並放置於</span> <span class="n">blog</span><span class="o">/</span><span class="n">html</span><span class="o">/</span> <span class="err">下對應的目錄之中</span>
 </pre></div>
 
 
@@ -105,8 +111,8 @@ or
 <li>dark</li>
 </ul>
 <p>在 conf.py 中，只要變更 <strong>html_theme</strong> 這個變數的值，就可以指定該 Blog 要使用的 Theme。</p>
-<div class="highlight"><pre># Pick another Tinkerer theme or use your own
-html_theme = &quot;modern5&quot;
+<div class="highlight"><pre><span class="cp"># Pick another Tinkerer theme or use your own</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s">&quot;modern5&quot;</span>
 </pre></div>
 
 
@@ -133,23 +139,21 @@ html_theme = &quot;modern5&quot;
 在使用 User Page 來建立網站時，必須建立一個叫 username.github.io 的 Repository，並將網頁 commit 到該 Repository 的 master branch 中。
 接著 push 到 <a href="https://github.com/">GitHub</a> 後，便會產生一個可供使用者瀏覽的網站。一般來說，User page 連結的 URL 為 <strong>http://username.github.io/</strong>。
 有關 User page 的詳細資訊，可參考 <a href="https://help.github.com/articles/user-organization-and-project-pages#user--organization-pages">User &amp; Organization Pages</a></p></div>
-	
-        <hr>
-
-        <h2>Comments</h2>
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'shinbo91blog'; 
-    var disqus_title = 'A static blog generator - Tinkerer';
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <hr />
     </div>
+		
+<div class="pagination">
+<ul>
+    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
+
+    <li class="active"><a href="http://shinbo91.github.io/tag/.html">1</a></li>
+
+    <li class="next disabled"><a href="#">&rarr; Next</a></li>
+
+</ul>
+</div>
+ 
+  
         </div>
         
         <div class="span3">
@@ -190,7 +194,7 @@ html_theme = &quot;modern5&quot;
     </div>     </div> 
 <footer>
 <br />
-<p><a href="http://shinbo91.github.io">shinbo91's blog</a> &copy; shinbo91 2015</p>
+<p><a href="http://shinbo91.github.io">shinbo91's blog</a> &copy; shinbo91 2014</p>
 </footer>
 
 </div> <!-- /container -->

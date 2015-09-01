@@ -51,11 +51,52 @@
     <div class="row">
 
         <div class="span9">
+        
+
+        
+
+
+    <div class='article'>
+        <div class="content-title">
+            <a href="http://shinbo91.github.io/hg_push_autoupdate_changeset.html"><h1>Update changesets of server repository automatically while client pushes new changests</h1></a>
+星期二 01 九月 2015
+
+by <a class="url fn" href="http://shinbo91.github.io/author/shinbo91.html">shinbo91</a>
+ 
+
+
+ 
+        </div>
+        
+        <div><p><a href="https://mercurial.selenic.com/">Hg</a> Client 從 Server 進行 Pull 動作時, 從 Server 上 Sync 下來的 Changesets 預設是不會進行 Merge 及 Update 動作.</p>
+<p>同樣的, Client 將透過 Push 動作將 Changesets 發送至 Server 上, Server 上的 Repository 也是不會進行 Merge 及 Update 動作。
+但若是 Server 有開啟 Web 介面, 則看到的會是 Client 發送 Changesets 後的最新狀態。</p>
+<p>若是希望 Server 的 Repository 在 Client 進行 Push 動作後, 可以自動進行 Update.
+則可以在 Server 的 mercurial.ini 中加入下列內容即可:</p>
+<div class="highlight"><pre><span class="k">[hooks]</span>
+<span class="na">changegroup</span> <span class="o">=</span> <span class="s">hg update</span>
+</pre></div>
+
+
+<p>參考資料:</p>
 <ul>
-    <li><a href="http://shinbo91.github.io/tag/mac.html">mac</a></li>
-    <li><a href="http://shinbo91.github.io/tag/mercurial.html">mercurial</a></li>
-    <li><a href="http://shinbo91.github.io/tag/pelican.html">pelican</a></li>
+<li><a href="https://mercurial.selenic.com/wiki/FAQ#FAQ.2FCommonProblems.Any_way_to_.27hg_push.27_and_have_an_automatic_.27hg_update.27_on_the_remote_server.3F">Any way to 'hg push' and have an automatic 'hg update' on the remote server?</a></li>
+</ul></div>
+        <hr />
+    </div>
+		
+<div class="pagination">
+<ul>
+    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
+
+    <li class="active"><a href="http://shinbo91.github.io/tag/mercurial.html">1</a></li>
+
+    <li class="next disabled"><a href="#">&rarr; Next</a></li>
+
 </ul>
+</div>
+ 
+  
         </div>
         
         <div class="span3">
